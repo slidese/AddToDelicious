@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Add to Delicious</string>
+    <string name="notification_error_title">Add to Delicious error</string>
+    <string name="notification_error">Could not save %1$s to Delicous. Please make sure your username and password are correct.</string>
+    <string name="notification_error_userpass">Please make sure your username and password are correct.</string>
+
+</resources>

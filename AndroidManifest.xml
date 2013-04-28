@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="se.slide.addtodelicious"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="se.slide.addtodelicious.MainActivity"
+            android:theme="@style/Invisible"
+            android:label="@string/app_name" >
+            
+            <intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="text/plain" />
+		    </intent-filter>
+            
+        </activity>
+        <activity
+            android:name="se.slide.addtodelicious.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+        <service 
+        	android:enabled="true"
+        	android:name="se.slide.addtodelicious.ShareService" />
+        
+    </application>
+
+</manifest>

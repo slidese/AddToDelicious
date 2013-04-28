@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Username -->
+    <string name="pref_default_username"></string>
+    <string name="pref_title_username">Username</string>
+    
+    <!-- Password -->
+    <string name="pref_default_password"></string>
+    <string name="pref_title_password">Password</string>
+    <string name="pref_description_password">Your Delicious password</string>
+    
+    <!-- Tag -->
+    <string name="pref_default_tag">readlater</string>
+    <string name="pref_title_tag">Tag</string>
+    
+    <!-- Private -->
+    <string name="pref_description_private">Mark bookmarks as private</string>
+    <string name="pref_title_private">Private</string>
+    
+</resources>
