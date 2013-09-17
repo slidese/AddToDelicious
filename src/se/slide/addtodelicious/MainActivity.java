@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 public class MainActivity extends Activity {
 
     @Override
@@ -27,7 +29,7 @@ public class MainActivity extends Activity {
                 i.putExtra(Intent.EXTRA_SUBJECT, title);
                 
                 startService(i);
-                
+                EasyTracker.getInstance(this).activityStart(this); // We will never read the onStart state so we have to send analytics at this point
             }
         }
 
@@ -35,5 +37,11 @@ public class MainActivity extends Activity {
         finish();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EasyTracker.getInstance(this).activityStop(this); // We called finish before activity started, so we'll go straight to destroy
+    }
+    
     
 }

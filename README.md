@@ -10,6 +10,7 @@ Using Android's built-in share functionality this app enables you to save sites 
 # Setup
 
 - Eclipse
+- A string resource `google_analytics_id` need to be created with a Google Analytics ID.
 
 # Developed by
 
