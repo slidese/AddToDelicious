@@ -13,6 +13,8 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -37,6 +39,8 @@ public class ShareService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        
+        Crashlytics.start(this);
 
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 

@@ -44,6 +44,8 @@
         	android:enabled="true"
         	android:name="se.slide.addtodelicious.ShareService" />
         
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="5ed0746b8daa9e45a4b43ba68c996373bf3dc9ac"/>
+        
     </application>
 
 </manifest>
